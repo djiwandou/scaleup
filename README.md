@@ -14,7 +14,7 @@ About the author:
 > Each sections contains thought journey and some references
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
-    * [Scope, Assumptions and Constraints](#scope-assumpttions-and-constraints)
+    * [Scope Assumptions and Constraints](#scope-assumpttions-and-constraints)
     * [Rough Estimates](#rough-estimates)
 * [High Level Design](#high-level-design)
     * [General System Design](#general-system-design)
@@ -35,7 +35,7 @@ About the author:
 
 * Mind-map
 
-### Scope, Assumptions and Constraints
+### Scope Assumptions and Constraints
 
 * Who
 
