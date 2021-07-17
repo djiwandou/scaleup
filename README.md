@@ -11,10 +11,11 @@ About the author:
 
 ## Index (Table of Content)
 > This is the TOC
+
 > Each sections contains thought journey and some references
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
-    * [Scope Assumptions and Constraints](#scope-assumpttions-and-constraints)
+    * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
     * [Rough Estimates](#rough-estimates)
 * [High Level Design](#high-level-design)
     * [General System Design](#general-system-design)
