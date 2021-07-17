@@ -10,8 +10,7 @@ About the author:
 > Trying to balance between Quality & Pragmatism on software development.
 
 ## Index (Table of Content)
-> This is the TOC
-
+> This is the TOC ~ 
 > Each sections contains thought journey and some references
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
