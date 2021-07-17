@@ -7,7 +7,7 @@ scaling up saved search
 About the author:
 > Work with heart, we are human not cows 
 > 
-> Trying to balance between Quality & Pragmatism on system design and arch.
+> Trying to balance between Quality & Pragmatism on software development.
 
 ## Index (Table of Content)
 > This is the TOC
