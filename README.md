@@ -62,7 +62,12 @@ About the author:
 ## API Design
 
 ## Scale Up
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/74530990/126076863-74ca9f59-1e33-452d-b426-a5604bc97619.png"/>
+    <br/>
+</p>
 
+Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
 ### DB Choice
 
 ### Additional Concerns
