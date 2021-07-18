@@ -41,6 +41,35 @@ title Scalability, Availability & Stability Patterns
 **** Partitioning
 **** Replication
 *** Behavior
+**** Compute Grids
+**** Event-Driven Architecture
+***** Messaging
+******_ Publish-Subscribe
+******_ Point-to-Point
+******_ Store-Forward
+******_ Request-Reply
+***** Actors
+******_ Fire-forget
+******_ Fore-Receive-Eventually
+***** Enterprise Service Bus
+***** Domain Events
+***** Event Stream Processing
+***** Event Sourcing
+***** Command & Query Responsibility Segregation (CQRS)
+**** Load-Balancing
+***** Round-robin allocation
+***** Random allocation
+***** Weighted Allocation
+***** Dynamic Load Balancing
+******_ Work-stealing
+******_ Work-donating
+******_ Queue-depth querying
+**** Parallel Computing
+*****_ SPMD pattern
+*****_ Master/Worker pattern
+*****_ Loop Parallelism pattern
+*****_ Fork/join pattern
+*****_ MapReduce pattern
 left side
 ** Availability 
 ** Stability 
