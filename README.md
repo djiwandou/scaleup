@@ -63,7 +63,7 @@ About the author:
 
 ## Scale Up
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/74530990/126077393-461e5efa-306d-4919-82c5-71d26f0acd1d.png"/>
+    <img src="https://user-images.githubusercontent.com/74530990/126077773-01d50036-5138-4223-9f39-fd269b21e104.png"/>
     <br/>
 </p>
 

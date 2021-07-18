@@ -71,8 +71,21 @@ title Scalability, Availability & Stability Patterns
 *****_ Fork/join pattern
 *****_ MapReduce pattern
 left side
-** Availability 
-** Stability 
+** Availability
+*** Replication
+****_ Master-Slave
+****_ Master-Master
+****_ Buddy replication
+*** Fail-over
+** Stability
+*** Circuit Breaker
+*** Timeouts
+*** Let it crash/Supervisors
+*** Crash early
+*** Bulkheads
+*** Steady state (clean up resources)
+*** Throttling
+****_ SEDA
 
 legend right
   Created using PlantUML
