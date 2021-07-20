@@ -1,5 +1,5 @@
 # The Scaleup
-scaling up saved search
+A journey to build a scalable system (and sub-systems)
 
 <put image here>
 
@@ -28,8 +28,18 @@ About the author:
 * [Future and Further Exploration](#future-and-further-exploration)
 
 ## Intro: My Initial Thoughts
+<p align="center">
+<img width="392" alt="early_problem" src="https://user-images.githubusercontent.com/74530990/126313113-120293ec-9ea2-4c54-ad97-e29123c6b2b2.png">
+<br/>
+</p>
+First thing on my mind when I was asked to build/architect a Saved Search System is this personal so-called "principles"
 
-<put image here>
+1. Architecting is a journey/process and it should be beyond original specs & requirements
+2. Sometimes its OK to make quick & bold changes if ~~something occurs~~ traffic trends toward the upper limit of the design capacity
+3. Rely on data & metrics to make correct tech. design decisions
+4. Ensure metrics are easy to observe and to understand
+5. Workarounds are OK, but don't take it for too long because they are **Tech. Debts**
+
 
 * Re-state the problem/question
 

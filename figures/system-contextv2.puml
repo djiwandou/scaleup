@@ -1,0 +1,23 @@
+@startuml
+'!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+' uncomment the following line and comment the first to use locally
+ !include C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+title System Context diagram for Saved Search System
+
+Person(product1, "Product A", "User of Product A, with personal user accounts.")
+Person(product2, "Product B", "User of Product B, with personal user accounts.")
+System(saved_search_system, "Saved Search System", "Allows each product's users to view information about their searching behavior, and create searching listings.")
+
+System_Ext(mail_system, "E-mail system", "The external e-mail system, sent email about searching data on regular interval.")
+System_Ext(framework, "External storage system", "Stores all of the saved information about users search history, filter, etc.")
+
+Rel(product1, saved_search_system, "Uses")
+Rel(product2, saved_search_system, "Uses")
+Rel_Back(user1, mail_system, "Sends e-mails to")
+Rel_Back(user2, mail_system, "Sends e-mails to")
+Rel_Neighbor(saved_search_system, mail_system, "Sends search data", "email")
+Rel(saved_search_system, framework, "Uses")
+@enduml
