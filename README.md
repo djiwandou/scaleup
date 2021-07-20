@@ -57,9 +57,9 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 ### Roadmap
 | Version                | Description                                                                                    |
 |------------------------|------------------------------------------------------------------------------------------------|
-| Saved Search System v1 :hourglass_flowing_sand: | Initial saved search system, letting other products save the search result. See [v1 Use Cases](#saved-search-system-v1-use-cases).  |
-| Saved Search System v2 :hourglass_flowing_sand: | Second version of the saved search system,                                                                                                |
-|                        |                                                                                                |
+| Saved Search System v1 :mag: | Initial saved search system, letting other products save the search result. See [v1 Use Cases](#saved-search-system-v1-use-cases).  |
+| Saved Search System v2 :mag::satellite: | Second version of the saved search system,                                                                                                |
+| Saved Search System v3 :satellite::gear:                        |                                                                                                |
 
 * Each of the version will relate to the iteration version / mutually agreed deliverables scope between squad -Engineering Manager- with other stakeholders, e.g. Product Manager, Business Owners, etc.
 
