@@ -57,8 +57,10 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 ### Roadmap
 | Version                | Description                                                                                    |
 |------------------------|------------------------------------------------------------------------------------------------|
-| Saved Search System v1 | Initial saved search system, letting other products save the search result. See v1 Use Cases.  |
-| Saved Search System v2 |                                                                                                |
+| Saved Search System v1 
+:hourglass_flowing_sand: | Initial saved search system, letting other products save the search result. See v1 Use Cases.  |
+| Saved Search System v2 
+ :hourglass_flowing_sand:|                                                                                                |
 |                        |                                                                                                |
 
 
