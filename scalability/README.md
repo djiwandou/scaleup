@@ -9,10 +9,16 @@
 
 * Storage Calculation
 
+## Load Balancing
+* To distribute the load received
+
 ## Caching
 * Distributed Caching
 
 * Where? on what side
+
+* Reverse Proxy 
+Mainly used for for interacting with third party, e.g. Lunr, Solr, ElasticSearch (external search framework), GetResponse, Twilio (external email system)
 
 ## Database
 * Database Scaling
