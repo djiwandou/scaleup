@@ -1,0 +1,106 @@
+@startmindmap
+caption Scalability-Map
+title Scalability, Availability & Stability Patterns
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor lightgreen
+  }
+  .rose {
+    BackgroundColor #FFBBCC
+  }
+  .lightblue {
+    BackgroundColor lightblue
+  }
+}
+</style>
+* Scalability, Availability & Stability
+** Scalability <<green>>
+*** State <<rose>>
+**** Distributed Caching <<lightblue>>
+*****_ Write-behind
+*****_ Write-through
+*****_ Eviction policies
+******_ TTL
+******_ FIFO
+******_ LIFO
+*****_ Peer-To-Peer
+**** Data Grids <<lightblue>>
+*****_ In-memory storage
+*****_ Durable storage
+**** Service of Record <<lightblue>>
+***** NoSQL 
+******_ Key Value databases
+******_ Document databases
+******_ Graph databases
+******_ Datastructure databases
+***** RDBMS
+******_ Sharding
+*******_ Partitioning
+*******_ Replication
+******_ Denormalization
+******_ ORM + Rich domain model antipattern
+**** HTTP Caching <<lightblue>>
+*****_ Reverse Proxy
+*****_ CDN
+**** CAP theorem <<lightblue>>
+*****_ Consistent/Atomic data
+*****_ Eventually Consistent data
+**** Concurrency <<lightblue>>
+*****_ Message-Passing Concurrency
+*****_ Software Transactional Memory
+*****_ Dataflow Concurrency
+*****_ Shared-State Concurrency
+**** Partitioning <<lightblue>>
+**** Replication <<lightblue>>
+*** Behavior <<rose>>
+**** Compute Grids <<lightblue>>
+**** Event-Driven Architecture <<lightblue>>
+***** Messaging
+******_ Publish-Subscribe
+******_ Point-to-Point
+******_ Store-Forward
+******_ Request-Reply
+***** Actors
+******_ Fire-forget
+******_ Fore-Receive-Eventually
+***** Enterprise Service Bus
+***** Domain Events
+***** Event Stream Processing
+***** Event Sourcing
+***** Command & Query Responsibility Segregation (CQRS)
+**** Load-Balancing <<lightblue>>
+***** Round-robin allocation
+***** Random allocation
+***** Weighted Allocation
+***** Dynamic Load Balancing
+******_ Work-stealing
+******_ Work-donating
+******_ Queue-depth querying
+**** Parallel Computing <<lightblue>>
+*****_ SPMD pattern
+*****_ Master/Worker pattern
+*****_ Loop Parallelism pattern
+*****_ Fork/join pattern
+*****_ MapReduce pattern
+left side
+** Availability <<green>>
+*** Replication <<rose>>
+****_ Master-Slave
+****_ Master-Master
+****_ Buddy replication
+*** Fail-over <<rose>>
+** Stability <<green>>
+*** Circuit Breaker <<rose>>
+*** Timeouts <<rose>>
+*** Let it crash/Supervisors <<rose>>
+*** Crash early <<rose>>
+*** Bulkheads <<rose>>
+*** Steady state (clean up resources) <<rose>>
+*** Throttling <<rose>>
+****_ SEDA
+
+legend right
+  Created using PlantUML
+endlegend
+@endmindmap
