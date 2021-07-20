@@ -33,10 +33,10 @@ Saved search early illustration
 First thing on my mind when I was asked to build/architect a Saved Search System are these personal so-called "principles"
 
 1. Architecting is a journey/process and it should be beyond original specs & requirements, I personally support the **Continuous Architecture** concept
-2. Sometimes its OK to make quick & bold changes if ~~something occurs~~ traffic trends toward the upper limit of the design capacity
+2. Sometimes its OK to make quick & bold changes, especially if ~~something occurs~~ traffic trends toward the upper limit of the design capacity
 3. Rely on data & metrics to make correct tech. design decisions
 4. Ensure metrics are easy to observe and to understand
-5. Workarounds are also OK, but don't ignore it for too long because they are part of **Tech. Debts**
+5. Workarounds are also OK, but don't keep it for too long because they are part of **Tech. Debts**
 
 ### Scope Assumptions and Constraints
 
