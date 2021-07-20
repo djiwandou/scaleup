@@ -17,7 +17,6 @@ About the author:
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [General System Design](#general-system-design)
 * [High Level Design](#high-level-design)
-    * [General System Design](#general-system-design)
 * [Detailed Components Design](#detailed-components-design)
     * [Saved Search Service](#saved-search-service)
     * [Alert Notif Service](#alert-notif-service)
