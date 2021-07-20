@@ -11,7 +11,7 @@ About the author:
 
 ## Index (Table of Content)
 > This is the TOC ~ 
-> Each sections contains thought journey and some references
+> Each sections contains my thinking journey and some references
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
@@ -36,14 +36,13 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 2. Sometimes its OK to make quick & bold changes if ~~something occurs~~ traffic trends toward the upper limit of the design capacity
 3. Rely on data & metrics to make correct tech. design decisions
 4. Ensure metrics are easy to observe and to understand
-5. Workarounds are OK, but don't take it for too long because they are part of **Tech. Debts**
+5. Workarounds are also OK, but don't ignore it for too long because they are part of **Tech. Debts**
 
+### Scope Assumptions and Constraints
 
 * Re-state the problem/question
 
 * Mind-map
-
-### Scope Assumptions and Constraints
 
 * Who
 
