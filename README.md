@@ -70,7 +70,7 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 <p align="center">
     <img src="https://user-images.githubusercontent.com/74530990/126078027-4ff93bb7-ee28-418a-b2cc-f205e59f4e8e.png"/>
     <br/>
-    Scalability map, a range of technique and pattern to scale-up the system
+    Scalability map, a range of techniques and patterns to scale-up the system
 </p>
 
 Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
