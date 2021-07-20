@@ -97,3 +97,8 @@ See the diagram's code here [scalability map](figures/scalability-map.puml)
 Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
 
 ## Future and Further Exploration
+
+Throws back to my personal principle :point_up_2: [#3 and #4](#intro-my-initial-thoughts) 
+more to come... is always make the next best tech. decision based on the data and observability.
+
+And don't forget to keep exploring :punch:
