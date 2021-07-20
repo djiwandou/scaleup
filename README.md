@@ -1,7 +1,5 @@
 # The Scaleup
-A journey to build a scalable system (and sub-systems)
-
-<put image here>
+A journey to build a scalable Saved Search system (and sub-systems)
 
 ## Motivation
 About the author:
@@ -52,11 +50,11 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 
 ## General System Design
 
-* C4 
+### C4 
 
-* Diagram as a Code
+### Diagram as a Code
 
-* Roadmap
+### Roadmap
 
 ## High Level Design
 
@@ -72,6 +70,7 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 <p align="center">
     <img src="https://user-images.githubusercontent.com/74530990/126078027-4ff93bb7-ee28-418a-b2cc-f205e59f4e8e.png"/>
     <br/>
+    Scalability map, a range of technique and pattern to scale-up the system
 </p>
 
 Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
