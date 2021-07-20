@@ -7,12 +7,14 @@ LAYOUT_WITH_LEGEND()
 
 title System Context diagram for Saved Search System
 
-Person(product1, "Product A", "User of Product A, equipped with its own component (Frontend, Backend, Mobile).")
+Person(product1, "Product A", "System of Product A, equipped with its own component (Frontend, Backend, Mobile).")
 Person(product2, "Product B", "System of Product B, equipped with its own component (Frontend, Backend, Mobile).")
 System(saved_search_system, "Saved Search System", "Allows each product's component (Frontend, Backend, Mobile) to get saved searching task done, by embedding this system as plugins.")
 
 System_Ext(mail_system, "External e-mail system", "Distribute & advanced processing email about searching data on regular interval.")
 System_Ext(framework, "External search framework", "Stores & advanced processing saved searching data related to users search history, filter, etc.")
+
+Person_Ext(product3, "External Product C", "System of Product C, equipped with its own component (Frontend, Backend, Mobile).")
 
 Rel(product1, saved_search_system, "Uses/include plug-in")
 Rel(product2, saved_search_system, "Uses/include plug-in")
@@ -20,4 +22,5 @@ Rel_Back(user1, mail_system, "Sends e-mails to")
 Rel_Back(user2, mail_system, "Sends e-mails to")
 Rel_Neighbor(saved_search_system, mail_system, "Sends search data", "email")
 Rel(saved_search_system, framework, "Uses")
+Rel(product3, saved_search_system, "Uses/include plug-in")
 @enduml

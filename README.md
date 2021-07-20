@@ -67,7 +67,14 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 
 #### Saved Search System v1 Use Cases
 
+#### Saved Search System v2 Use Cases
 
+#### Saved Search System v3 Use Cases
+Will be explained more detail on the next design section.
+
+The focus on this version is making the Saved Search System to be generally available (GA) when the previous use cases are met, and an ecosystem of search-enabled plugins are avilable & stable.
+
+more to come... 
 ## High Level Design
 
 ## Detailed Components Design
