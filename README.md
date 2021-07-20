@@ -15,6 +15,7 @@ About the author:
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
+* [General System Design](#general-system-design)
 * [High Level Design](#high-level-design)
     * [General System Design](#general-system-design)
 * [Detailed Components Design](#detailed-components-design)
@@ -50,9 +51,15 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 
 * Use Cases
 
-## High Level Design
+## General System Design
 
-### General System Design
+* C4 
+
+* Diagram as a Code
+
+* Roadmap
+
+## High Level Design
 
 ## Detailed Components Design
 
