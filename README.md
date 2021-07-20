@@ -73,7 +73,7 @@ First thing on my mind when I was asked to build/architect a Saved Search System
     Scalability map, a range of techniques and patterns to scale-up the system
 </p>
 
-->see the diagram's code here [scalability map](figures/scalability-map.puml).<-
+See the diagram's code here [scalability map](figures/scalability-map.puml)
 
 Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
 
