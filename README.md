@@ -15,7 +15,6 @@ About the author:
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
-    * [Rough Estimates](#rough-estimates)
 * [High Level Design](#high-level-design)
     * [General System Design](#general-system-design)
 * [Detailed Components Design](#detailed-components-design)
@@ -23,14 +22,13 @@ About the author:
     * [Alert Notif Service](#alert-notif-service)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
-    * [DB Choice](#db-choice)
-    * [Additional Concerns](#additional-concerns)
 * [Future and Further Exploration](#future-and-further-exploration)
 
 ## Intro: My Initial Thoughts
 <p align="center">
 <img width="392" alt="early_problem" src="https://user-images.githubusercontent.com/74530990/126313113-120293ec-9ea2-4c54-ad97-e29123c6b2b2.png">
 <br/>
+Saved search early illustration
 </p>
 First thing on my mind when I was asked to build/architect a Saved Search System are these personal so-called "principles"
 
@@ -53,12 +51,6 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 
 * Use Cases
 
-### Rough Estimates 
-
-* Bandwidth Calculation
-
-* Storage Calculation
-
 ## High Level Design
 
 ### General System Design
@@ -78,8 +70,5 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 </p>
 
 Scalability is a wide topic to cover, so I will explain more in [Scalability Page](scalability/README.md).
-### DB Choice
-
-### Additional Concerns
 
 ## Future and Further Exploration

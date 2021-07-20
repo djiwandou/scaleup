@@ -3,6 +3,12 @@
 > 1. Exponential growth in CPU & Storage
 > 2. Linear growth rate in cost (build, operate, support, evolve)
 
+## Rough Estimates 
+
+* Bandwidth Calculation
+
+* Storage Calculation
+
 ## Caching
 * Distributed Caching
 
@@ -30,3 +36,5 @@
 ## Observability & Monitoring
 
 * Pattern references for observability & monitoring
+
+## Additional Concerns
