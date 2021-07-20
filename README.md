@@ -61,7 +61,7 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 | Saved Search System v2 :mag::satellite: | Second version of the saved search system,                                                                                                |
 | Saved Search System v3 :satellite::gear:                        |                                                                                                |
 
-* Each of the version will relate to the iteration version / mutually agreed deliverables scope between squad -Engineering Manager- with other stakeholders, e.g. Product Manager, Business Owners, etc.
+* Each of the version will relate to the iteration version / mutually agreed deliverables scope between squad -team and the respective Engineering Manager- with other stakeholders, e.g. Product Manager, Business Owners, etc.
 
 * Each of the version will incorporate software development phases, including: Planning, Grooming, Development (Pre-Alpha), Alpha, Beta -if needed-, Live production. 
 
