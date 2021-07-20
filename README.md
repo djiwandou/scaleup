@@ -32,13 +32,13 @@ About the author:
 <img width="392" alt="early_problem" src="https://user-images.githubusercontent.com/74530990/126313113-120293ec-9ea2-4c54-ad97-e29123c6b2b2.png">
 <br/>
 </p>
-First thing on my mind when I was asked to build/architect a Saved Search System is this personal so-called "principles"
+First thing on my mind when I was asked to build/architect a Saved Search System are these personal so-called "principles"
 
-1. Architecting is a journey/process and it should be beyond original specs & requirements
+1. Architecting is a journey/process and it should be beyond original specs & requirements, I personally support the **Continuous Architecture** concept
 2. Sometimes its OK to make quick & bold changes if ~~something occurs~~ traffic trends toward the upper limit of the design capacity
 3. Rely on data & metrics to make correct tech. design decisions
 4. Ensure metrics are easy to observe and to understand
-5. Workarounds are OK, but don't take it for too long because they are **Tech. Debts**
+5. Workarounds are OK, but don't take it for too long because they are part of **Tech. Debts**
 
 
 * Re-state the problem/question
