@@ -55,6 +55,13 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 ### Diagram as a Code
 
 ### Roadmap
+| Version                | Description                                                                                    |
+|------------------------|------------------------------------------------------------------------------------------------|
+| Saved Search System v1 | Initial saved search system, letting other products save the search result. See v1 Use Cases.  |
+| Saved Search System v2 |                                                                                                |
+|                        |                                                                                                |
+
+
 
 ## High Level Design
 
