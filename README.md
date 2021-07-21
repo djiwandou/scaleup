@@ -78,7 +78,13 @@ The focus on this version is making the Saved Search System to be **generally av
 ### Alert Notif Service
 
 ## API Design
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/74530990/126529996-dbe21105-951b-4ae3-89bb-a97ab649c984.png"/>
+    <br/>
+    API Design Considerations, things to lookup when designing API
+</p>
 
+See the diagram's code here [api design](figures/api-design.puml)
 ## Scale Up
 <p align="center">
     <img src="https://user-images.githubusercontent.com/74530990/126078027-4ff93bb7-ee28-418a-b2cc-f205e59f4e8e.png"/>
