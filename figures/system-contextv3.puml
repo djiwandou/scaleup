@@ -5,7 +5,7 @@
 
 LAYOUT_WITH_LEGEND()
 
-title System Context diagram for Saved Search System
+title System Context diagram for Saved Search System V3
 
 Person(product1, "Product A", "System of Product A, equipped with its own component (Frontend, Backend, Mobile).")
 Person(product2, "Product B", "System of Product B, equipped with its own component (Frontend, Backend, Mobile).")
