@@ -42,7 +42,18 @@ mindmapDiagram {
 ****_ GET /shops/:shopId/category/:categoryId/price
 *** good: <<lightblue>>
 ****_ GET /shops/:shopId/ or GET /category/:categoryId
-
+** 6. Keep verbs out of your Resource URL <<green>>
+*** bad: <<rose>>
+****_ POST /updateuser/{userId} or GET /getusers
+*** good: <<lightblue>>
+****_ PUT /user/{userId}
+** 7. Use verbs for non Resource URL (returns nothing but an operation) <<green>>
+*** good: <<lightblue>>
+****_ POST /alerts/245743/resend
+** 8. Use camelCase for JSON property
+*** bad: <<rose>>
+****_ POST /updateuser/{userId} or GET /getusers
+*** good: <<lightblue>>
 legend right
   Created using PlantUML
 endlegend
