@@ -41,7 +41,7 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 ## General System Design
 
 ### C4 and Architecture as a Code
-The design & arch. in this document are made on the basis of **C4 modelling** and **Arch. as a code approach** which are rendered using **PlantUML** engine.
+The design & arch. in this document are made on the basis of **C4 modelling** and **Arch. as a code approach** which then rendered using **PlantUML** engine.
 
 [C4 modelling](https://c4model.com/#CoreDiagrams) is an abstraction-first approach to diagramming software arch. based on 4 system thinking levelling: Context, Containers, Components, Code.
 
