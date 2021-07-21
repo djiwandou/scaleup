@@ -62,14 +62,14 @@ I used [PlantUML](https://plantuml.com/) as the rendering engine for generating 
 ### Scope Assumptions and Constraints
 #### Saved Search System v1 Use Cases
 <p align="left">
-<img width="392" alt="V1 system" src="https://user-images.githubusercontent.com/74530990/126531512-8d4a07fe-5fdf-49e7-a748-c2df49879446.png">
+<img width="392" alt="V1 system" src="https://user-images.githubusercontent.com/74530990/126533761-e38e9fd1-f989-42ee-8b4c-2866fbfdff7e.png">
 <br/>
 Saved search system V1 illustration
 </p>
 
 #### Saved Search System v2 Use Cases
 <p align="left">
-<img width="392" alt="V2 system" src="https://user-images.githubusercontent.com/74530990/126532499-7df81dd7-25f5-4ffa-aa1a-8b595571edc0.png">
+<img width="392" alt="V2 system" src="https://user-images.githubusercontent.com/74530990/126533491-18bdfe78-01cd-4529-b930-2a3b0fe8a2dc.png">
 <br/>
 Saved search system V2 illustration
 </p>
