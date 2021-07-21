@@ -12,8 +12,10 @@ About the author:
 > Each sections contains my thinking journey and some references
 
 * [Intro: My Initial Thoughts](#intro-my-initial-thoughts)
-    * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [General System Design](#general-system-design)
+    * [C4 and Architecture as a Code](#c4-and-architecture-as-a-code)
+    * [Roadmap](#roadmap) 
+    * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
 * [Detailed Components Design](#detailed-components-design)
     * [Saved Search Service](#saved-search-service)
@@ -36,21 +38,9 @@ First thing on my mind when I was asked to build/architect a Saved Search System
 4. Ensure metrics are easy to observe and to understand
 5. Workarounds are also OK, but don't keep it for too long because they are part of **Tech. Debts**
 
-### Scope Assumptions and Constraints
-
-* Re-state the problem/question
-
-* Mind-map
-
-* Who
-
-* How
-
-* Use Cases
-
 ## General System Design
 
-### C4 & Architecture as a Code
+### C4 and Architecture as a Code
 The design & arch. in this document are made on the basis of **C4 modelling** and **Arch. as a code approach** which are rendered using **PlantUML** engine.
 
 [C4 modelling](https://c4model.com/#CoreDiagrams) is an abstraction-first approach to diagramming software arch. based on 4 system thinking levelling: Context, Containers, Components, Code.
@@ -69,6 +59,7 @@ I used [PlantUML](https://plantuml.com/) as the rendering engine for generating 
 
 * Each of the version will incorporate software development phases, including: Planning, Grooming, Development (Pre-Alpha), Alpha, Beta -if needed-, Live production. 
 
+### Scope Assumptions and Constraints
 #### Saved Search System v1 Use Cases
 
 #### Saved Search System v2 Use Cases
