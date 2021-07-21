@@ -1,0 +1,49 @@
+@startmindmap
+caption API-Design Considerations
+title API Design Considerations
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor lightgreen
+  }
+  .rose {
+    BackgroundColor #FFBBCC
+  }
+  .lightblue {
+    BackgroundColor lightblue
+  }
+}
+</style>
+* API Design
+** 1. Resource Oriented Design <<green>>
+*** Resource <<lightblue>>
+****_ a piece of data
+*** Collection <<lightblue>>
+****_ a group of resources
+*** URL <<lightblue>>
+****_ location of resource/Collection
+** 2. Use kebab-case for URLs <<green>>
+*** bad: <<rose>>
+****_ /systemOrders or /system_orders
+*** good: <<lightblue>>
+****_ /system-orders
+** 3. Use camelCase for Parameters <<green>>
+*** bad: <<rose>>
+****_ /system-orders/{order_id} or /system-orders/{OrderId}
+*** good: <<lightblue>>
+****_ /system-orders/{orderId}
+** 4. Plural name to point to a collection <<green>>
+*** bad: <<rose>>
+****_ GET /user or GET /User
+*** good: <<lightblue>>
+****_ GET /users
+** 5. URL starts with a Collection and ends with an Identifier <<green>>
+*** bad: <<rose>>
+****_ GET /shops/:shopId/category/:categoryId/price
+*** good: <<lightblue>>
+****_ GET /shops/:shopId/ or GET /category/:categoryId
+
+legend right
+  Created using PlantUML
+endlegend
+@endmindmap
