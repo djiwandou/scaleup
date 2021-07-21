@@ -68,6 +68,11 @@ Saved search system V1 illustration
 </p>
 
 #### Saved Search System v2 Use Cases
+<p align="left">
+<img width="392" alt="V2 system" src="https://user-images.githubusercontent.com/74530990/126532499-7df81dd7-25f5-4ffa-aa1a-8b595571edc0.png">
+<br/>
+Saved search system V2 illustration
+</p>
 
 #### Saved Search System v3 Use Cases
 Will be explained more detail on the next design section.
