@@ -50,10 +50,26 @@ mindmapDiagram {
 ** 7. Use verbs for non Resource URL (returns nothing but an operation) <<green>>
 *** good: <<lightblue>>
 ****_ POST /alerts/245743/resend
-** 8. Use camelCase for JSON property
+** 8. Use camelCase for JSON property <<green>>
 *** bad: <<rose>>
-****_ POST /updateuser/{userId} or GET /getusers
+****_:<code>
+{
+   user_name: "Djiwandou"
+   user_id: "1"
+}
+</code>;
 *** good: <<lightblue>>
+****_:<code>
+{
+   userName: "Djiwandou"
+   userId: "1"
+}
+</code>;
+** 9. Golden Rules
+*** Flat is better than nested <<lightblue>>
+*** Simple is better than complex <<lightblue>>
+*** Strings are better than number <<lightblue>>
+*** Consistency is better than customization <<lightblue>>
 legend right
   Created using PlantUML
 endlegend
