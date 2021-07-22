@@ -105,7 +105,13 @@ Will be explained more detail on the next design section.
 The focus on this version is making the Saved Search System to be **generally available (GA)** when the previous use cases are met, and an ecosystem of search-enabled plugins are avilable & stable.
 
 ## High Level Design
-
+> Comprises of system context and container diagram
+### System Context Diagram
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/74530990/126722232-ba9b754c-edfa-49a2-b425-7943260cabf3.png"/>
+    <br/>
+    Saved Search System Context Diagram V3 
+</p>
 ## Detailed Components Design
 
 ### Saved Search Service
