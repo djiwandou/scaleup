@@ -5,15 +5,13 @@
 
 ## Rough Estimates 
 * I assume each saved search query will be stored in Key:Value type of data
-    * Key: combination of user-Id and saved-search-Id 
+    * Key: unique user-Id 
     * Value: saved search listings consists of search query including filter attributes and a call to action link to the originated website
     * `user-id` - 10 bytes
-    * `saved-search-id` - 10 bytes
-    * `search-query` -  80 bytes 
+    * `search-query` -  90 bytes 
         * `filter-attr1` - 20 bytes
         * `filter-attr2` - 20 bytes
-        * `filter-attr3` - 20 bytes
-        * `call-to-action` - 20 bytes
+        * `call-to-action` - 50 bytes
     * **Total: 100 bytes**
 * Storage: 
     * 100 bytes * 100 million requests monthly if all value are uniques
@@ -23,7 +21,7 @@
     * 3.5 million requests daily
     * Each request needs around 100 bytes 
     * 100 bytes * 3.5 million requests daily
-    * **100 MB of bandwidth**
+    * **350 MB of bandwidth**
 
 Handy conversion guide: 
 * 2.5 million seconds per month
