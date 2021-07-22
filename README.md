@@ -63,21 +63,16 @@ I used [PlantUML](https://plantuml.com/) as the rendering engine for generating 
 > Gather requirements and scope the problem. Clarify use cases and constraints. Discuss assumptions.
 #### Functional Requirements
 * Saved search system allows users to save multiple filtering dimensions on a listing search
-
 * Users will receive email alerts on regular intervals with regards to the listing search
-
 * Alerts received by the users contain at most 10 entries across all saved search
-
 * Each entry consists of: title, description, call to action link back to the website
 
 #### Non-Functional Requirements
 * Saved search system is reusable with future facing Products 
-
 * The system should cater for multiple Products with each product has it's own data store and listing representation
-
 * The system should scale to millions of requests daily
 
-##### Constraints and assumptions
+#### Constraints and assumptions
 
 * Traffic is not evenly distributed
     * Popular saved search request should almost always be put in the cache
@@ -87,7 +82,7 @@ I used [PlantUML](https://plantuml.com/) as the rendering engine for generating 
 * Limited memory in cache
     * Need to determine what to keep/remove
     * Need to cache millions of saved search request
-* 100 million requests per month ~ 40 requests per second, see (Scalability Page)[scalability/README.md#rough-estimates] for more detail
+* 100 million requests per month ~ 40 requests per second, see [Scalability Page](scalability/README.md#rough-estimates) for more detail
 
 
 #### Saved Search System v1 Use Cases
