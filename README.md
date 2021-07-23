@@ -47,7 +47,7 @@ The design & arch. in this document are made on the basis of **C4 modelling** an
 
 [Arch. as a code](https://github.com/trilogy-group/arch-as-code) is an approach to manage system design and diagram into a .yaml like code thus make it transparent to versioning and many benefit of teamwork techniques, e.g. PR reviews, static code analysis, CI/CD, etc.
 
-I used [PlantUML](https://plantuml.com/) as the rendering engine for generating the diagram based on the [code](figures/). 
+I used [PlantUML](https://github.com/djiwandou/C4-PlantUML) as the rendering engine for generating the diagram based on the [code](figures/). 
 ### Roadmap
 | Version                | Description                                                                                    |
 |------------------------|------------------------------------------------------------------------------------------------|
