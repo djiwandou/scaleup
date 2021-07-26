@@ -17,9 +17,6 @@ About the author:
     * [Roadmap](#roadmap) 
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
-* [Detailed Components Design](#detailed-components-design)
-    * [Saved Search Service](#saved-search-service)
-    * [Alert Notif Service](#alert-notif-service)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
 * [Future and Further Exploration](#future-and-further-exploration)
@@ -112,11 +109,6 @@ The focus on this version is making the Saved Search System to be **generally av
     <br/>
     Saved Search System Context Diagram V3 
 </p>
-## Detailed Components Design
-
-### Saved Search Service
-
-### Alert Notif Service
 
 ## API Design
 <p align="center">
