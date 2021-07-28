@@ -17,6 +17,7 @@ About the author:
     * [Roadmap](#roadmap) 
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
+* [How the System Work](#how-the-system-work)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
 * [Future and Further Exploration](#future-and-further-exploration)
@@ -109,6 +110,37 @@ The focus on this version is making the Saved Search System to be **generally av
     <br/>
     Saved Search System Context Diagram V3 
 </p>
+
+See the diagram's code here [system context v3](figures/system-contextv3.puml)
+
+### Product
+Product here, depicted by **Product A, B, and C** is defined as the system where sometimes directly related to end users ("real" external users or another internal department). The Products can also be categorized as internal (development happened in-house or internally) or external (development externally either by third party or communities support).
+
+Product sometimes consists of any of these modules (at least one component): 
+* Frontend 
+* Backend
+* Mobile
+
+
+## How the System Work
+
+### 1. Integration with Products
+**Product Listing Handler** is the name of the component who will take care of the common integration with the Products. Each of the products will have their own respective listing -read: communication format, protocol, or even their own standardize "language"- as they are developed by another squads.
+
+
+
+#### Integration with Frontend & Mobile
+
+#### Integration with Backend
+
+### 2. Dealing with External Search Frameworks
+**Saved Search Handler**
+
+### 3. Communication with External e-mail System
+**E-mail Handler**
+
+### 4. Observation and Monitoring
+**Alert Handler**
 
 ## API Design
 <p align="center">
