@@ -17,6 +17,8 @@ About the author:
     * [Roadmap](#roadmap) 
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
+    * [System Context Diagram](#system-context-diagram)
+    * 
 * [How the System Work](#how-the-system-work)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
@@ -103,7 +105,7 @@ Will be explained more detail on the next design section.
 The focus on this version is making the Saved Search System to be **generally available (GA)** when the previous use cases are met, and an ecosystem of search-enabled plugins are avilable & stable.
 
 ## High Level Design
-> Comprises of system context and container diagram
+> Comprises of system context diagram and explanation on how the system work
 ### System Context Diagram
 <p align="center">
     <img src="https://user-images.githubusercontent.com/74530990/126722232-ba9b754c-edfa-49a2-b425-7943260cabf3.png"/>
@@ -121,26 +123,44 @@ Product sometimes consists of any of these modules (at least one component):
 * Backend
 * Mobile
 
+### Saved Search System
+This is the core of the system. **Saved Search System** comprises of several handlers and components in order to do it's function properly. 
+
+### External e-mail system
+
+### External search framework
 
 ## How the System Work
 
 ### 1. Integration with Products
 **Product Listing Handler** is the name of the component who will take care of the common integration with the Products. Each of the products will have their own respective listing -read: communication format, protocol, or even their own standardize "language"- as they are developed by another squads.
 
-
+What are the process inside this handler
+* Parsing
+* Hydrating
+* Processing (Batching)
 
 #### Integration with Frontend & Mobile
 
 #### Integration with Backend
 
-### 2. Dealing with External Search Frameworks
+### 2. Saved Search Handling & Dealing with External Search Frameworks
 **Saved Search Handler**
 
 ### 3. Communication with External e-mail System
 **E-mail Handler**
+<put multi provider handler image here>
 
 ### 4. Observation and Monitoring
-**Alert Handler**
+**Alert Handler** is the sub-system designated for communicating with **Main Alert System** for the purpose of observing and monitoring the Saved Search System overall lifecycle. 
+The process inside this handler including, but not limited to: 
+* alert distribution
+* customize alert message
+* set owner of the alert, e.g. security team, respective squad
+* de-duplication
+* automated follow up and metrics, e.g. give trigger to auto restart pod when shutted down, auto scale, etc.
+
+As the reference for **Main Alert System** I would like to give appreciation to [Spotify Comet alert framework](https://github.com/spotify/comet) as main references. :clap:
 
 ## API Design
 <p align="center">
