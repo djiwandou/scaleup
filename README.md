@@ -18,7 +18,6 @@ About the author:
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
     * [System Context Diagram](#system-context-diagram)
-    * 
 * [How the System Work](#how-the-system-work)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
@@ -124,11 +123,15 @@ Product sometimes consists of any of these modules (at least one component):
 * Mobile
 
 ### Saved Search System
-This is the core of the system. **Saved Search System** comprises of several handlers and components in order to do it's function properly. 
+This is the core of the system. **Saved Search System** comprises of several handlers and components in order to do its function properly, i.e. Product Listing Handler, Saved Search Handler, Search Framework Integrator, E-mail Handler, Alert Handler.
 
 ### External e-mail system
+External e-mail system, is the system with sole purpose to deal with e-mail messages distribution to the users and its related properties: regularly set the email sending time, set email recipient, including more advanced features such as: get metrics on the email data, users segmentation, set campaign, etc. 
+The example of external e-mail systems are: SaaS, Twilio, MailChimp, and GetResponse. 
 
 ### External search framework
+This external search framework provides more advanced features of searching and its related properties, e.g. 
+The example of external search frameworks are: SaaS, Solr, Lunr, and possibly the most wellknown Elastic. 
 
 ## How the System Work
 
@@ -140,12 +143,15 @@ What are the process inside this handler
 * Hydrating
 * Processing (Batching)
 
+
+### 2. Saved Search Handling & Dealing with External Search Frameworks
+**Saved Search Handler** is the core of this system.
+
+**Search Framework Integrator** is the sub-system with the aim to enable the capability to deploy Saved Search System using any search engine, by providing an integration and translation layer between the core :point_up_2: and search engine specific logic that can be extended for different search engines. 
+
 #### Integration with Frontend & Mobile
 
 #### Integration with Backend
-
-### 2. Saved Search Handling & Dealing with External Search Frameworks
-**Saved Search Handler**
 
 ### 3. Communication with External e-mail System
 **E-mail Handler**
@@ -154,13 +160,13 @@ What are the process inside this handler
 ### 4. Observation and Monitoring
 **Alert Handler** is the sub-system designated for communicating with **Main Alert System** for the purpose of observing and monitoring the Saved Search System overall lifecycle. 
 The process inside this handler including, but not limited to: 
-* alert distribution
-* customize alert message
+* set alert distribution
+* customize alert message 
 * set owner of the alert, e.g. security team, respective squad
 * de-duplication
-* automated follow up and metrics, e.g. give trigger to auto restart pod when shutted down, auto scale, etc.
+* automated follow up and metrics, e.g. give trigger to auto restart pod event when shutted down, auto scale, etc.
 
-As the reference for **Main Alert System** I would like to give appreciation to [Spotify Comet alert framework](https://github.com/spotify/comet) as main references. :clap:
+For the reference for **Main Alert System** I would like to give appreciation to [Spotify Comet alert framework](https://github.com/spotify/comet) as the main references. :clap: :clap:
 
 ## API Design
 <p align="center">
