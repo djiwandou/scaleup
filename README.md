@@ -18,7 +18,7 @@ About the author:
     * [Scope Assumptions and Constraints](#scope-assumptions-and-constraints)
 * [High Level Design](#high-level-design)
     * [System Context Diagram](#system-context-diagram)
-* [How the System Work](#how-the-system-work)
+* [How the System Works](#how-the-system-works)
 * [API Design](#api-design)
 * [Scale Up](#scale-up)
 * [Future and Further Exploration](#future-and-further-exploration)
@@ -133,7 +133,7 @@ The example of external e-mail systems are: SaaS, Twilio, MailChimp, and GetResp
 This external search framework provides more advanced features of searching and its related properties, e.g. analytics, auto-completion, correcting typos, handling synoyms, advanced filtering, rating, etc.
 The example of external search frameworks are: SaaS, Solr, Lunr, and possibly the most wellknown Elasticsearch. 
 
-## How the System Work
+## How the System Works
 
 ### 1. Integration with Products
 **Product Listing Handler** is the name of the component who will take care of the common integration with the Products. Each of the products will have their own respective listing -read: communication format, protocol, or even their own standardize "language"- as they are developed by another squads.
