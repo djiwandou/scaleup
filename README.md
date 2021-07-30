@@ -142,22 +142,26 @@ So, if the characteristics of each Products are unique, then we should do these 
 1. Parsing: 
 First, we need to define our own `Schema` or listing that describes which fields we are expecting from the incoming messages (listing data from the Products). 
 Irrespective for each product's listing or schema, they need to follow the system's schema. In regards to this process, we could also register/re-define or set the main schema reference that is used in our system. 
+
 Parsing is the process to get the required data from each product's listing and convert it into Saved Search System's own schema. 
 
 2. Hydrating: 
 Often, when we received incoming messages that has less than required data format. In this case, we will utilized `Hydrator` function that adds the required information in order to meet standardized `Schema`.
-Thus hydrating is the process to "enrich" or "hydrate" the data to meet the minimum format.
+To sum up, hydrating is the process to "enrich" or "hydrate" the data to meet the minimum format.
 
-3. Processing (Batching)
+3. Processing (Batching):
 Then, after the data is ready, this handler will send the whole data, batch-processing and send it through the right channels to the Core **Saved Search Handler**.
 
 ### 2. Saved Search Handling & Dealing with External Search Frameworks
 **Saved Search Handler** is the core of this system. 
 These are the core's job:
-> The main function for this handler is to save/store search listing as well as its included filtering dimensions, receiving the batch to-be-stored-data from [**Product Listing Handler**](#integration-with-products) 
-> As well as communicating with **Search Framework Integrator** to get better refined search and filtering results. 
-> And in the end of the day to send trigger (search-data & message properties) to [**E-mail Handler**](#communication-with-external-email-system) to deal with external communication to users.
-> In the internal communication side, this core needed to give updated status to [**Alert Handler**](#observation-and-monitoring) whether the whole Saved Search System status is OK or might be endangered. 
+> The main function for this handler is to save/store search listing as well as its included filtering dimensions, receiving the batch to-be-stored-data from [**Product Listing Handler**](#1-integration-with-products) 
+> 
+> As well as communicating with [**Search Framework Integrator**](#2-saved-search-handling-&-dealing-with-external-search-frameworks) to get better refined search and filtering results. 
+> 
+> And in the end of the day to send trigger (search-data & message properties) to [**E-mail Handler**](#3-communication-with-external-email-system) to deal with external communication to users.
+> 
+> In the internal communication side, this core needed to give updated status to [**Alert Handler**](#4-observation-and-monitoring) whether the whole Saved Search System status is OK or might be endangered. 
 
 
 **Search Framework Integrator** is the sub-system with the aim to enable the capability to deploy Saved Search System using any search engine, by providing an integration and translation layer between the core :point_up_2: and search engine specific logic that can be extended for different search engines. 
@@ -228,7 +232,9 @@ func main() {
 
 ### 3. Communication with External email System
 In order to get better separation of concern and avoid Single Point of Failure (SPoF), more specialized handler is used to communicate to multiple external e-mail systems namely **E-mail Handler**.
-For example, the system will have GetResponse, Twilio and MailChimp as the external e-mail systems. Thus this handler will cover the direct interfacing layer to the system and translate the trigger (search-data and message properties ) received from the Core **Saved Search Handler** to each of the external system.
+
+For example, the system will have GetResponse, Twilio and MailChimp as the external e-mail systems. Thus, this handler will cover the direct interfacing layer to the system and translate the trigger (search-data and message properties ) received from the Core **Saved Search Handler** to each of the external system.
+
 This Handler will also incorporate scalability pattern to get the most reliable external system in terms of Round-Robin application and Fail-over in case one of the external system fail to do the job then other will take-over. 
 
 ### 4. Observation and Monitoring
