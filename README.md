@@ -101,7 +101,7 @@ Saved search system V2 illustration
 #### Saved Search System v3 Use Cases
 Will be explained more detail on the next design section.
 
-The focus on this version is making the Saved Search System to be **generally available (GA)** when the previous use cases are met, and an ecosystem of search-enabled plugins are avilable & stable.
+The focus on this version is making the Saved Search System to be **generally available (GA)** when the previous use cases are met, and an ecosystem of search-enabled plugins are available & stable.
 
 ## High Level Design
 > Comprises of system context diagram and explanation on how the system work
@@ -130,32 +130,106 @@ External e-mail system, is the system with sole purpose to deal with e-mail mess
 The example of external e-mail systems are: SaaS, Twilio, MailChimp, and GetResponse. 
 
 ### External search framework
-This external search framework provides more advanced features of searching and its related properties, e.g. 
-The example of external search frameworks are: SaaS, Solr, Lunr, and possibly the most wellknown Elastic. 
+This external search framework provides more advanced features of searching and its related properties, e.g. analytics, auto-completion, correcting typos, handling synoyms, advanced filtering, rating, etc.
+The example of external search frameworks are: SaaS, Solr, Lunr, and possibly the most wellknown Elasticsearch. 
 
 ## How the System Work
 
 ### 1. Integration with Products
 **Product Listing Handler** is the name of the component who will take care of the common integration with the Products. Each of the products will have their own respective listing -read: communication format, protocol, or even their own standardize "language"- as they are developed by another squads.
 
-What are the process inside this handler
-* Parsing
-* Hydrating
-* Processing (Batching)
+So, if the characteristics of each Products are unique, then we should do these processes inside the handler
+1. Parsing: 
+First, we need to define our own `Schema` or listing that describes which fields we are expecting from the incoming messages (listing data from the Products). 
+Irrespective for each product's listing or schema, they need to follow the system's schema. In regards to this process, we could also register/re-define or set the main schema reference that is used in our system. 
+Parsing is the process to get the required data from each product's listing and convert it into Saved Search System's own schema. 
 
+2. Hydrating: 
+Often, when we received incoming messages that has less than required data format. In this case, we will utilized `Hydrator` function that adds the required information in order to meet standardized `Schema`.
+Thus hydrating is the process to "enrich" or "hydrate" the data to meet the minimum format.
+
+3. Processing (Batching)
+Then, after the data is ready, this handler will send the whole data, batch-processing and send it through the right channels to the Core **Saved Search Handler**.
 
 ### 2. Saved Search Handling & Dealing with External Search Frameworks
-**Saved Search Handler** is the core of this system.
+**Saved Search Handler** is the core of this system. 
+These are the core's job:
+> The main function for this handler is to save/store search listing as well as its included filtering dimensions, receiving the batch to-be-stored-data from [**Product Listing Handler**](#integration-with-products) 
+> As well as communicating with **Search Framework Integrator** to get better refined search and filtering results. 
+> And in the end of the day to send trigger (search-data & message properties) to [**E-mail Handler**](#communication-with-external-email-system) to deal with external communication to users.
+> In the internal communication side, this core needed to give updated status to [**Alert Handler**](#observation-and-monitoring) whether the whole Saved Search System status is OK or might be endangered. 
+
 
 **Search Framework Integrator** is the sub-system with the aim to enable the capability to deploy Saved Search System using any search engine, by providing an integration and translation layer between the core :point_up_2: and search engine specific logic that can be extended for different search engines. 
 
-#### Integration with Frontend & Mobile
+#### Integration with Frontend or Mobile
+This sub-system could be integrated using plugin-like approach for FE or Mobile. 
+For example, we could declare the plugin via `gradleAPI()` as custom Gradle tasks or plugins for Mobile, e.g. Kotlin.
+```
+plugins {
+    `saved-search-plugin-mobile`
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("dubizzle.mod.savedsearch:3.1")
+}
+```
+In the FE side, the plugin is JS-based could be added through npm installation
+```console
+$ npm i savedsearch-plugin-fe
+```
+or if this plugin will be installed globally, please add `-g` for the npm param
+```console
+$ npm i -g savedsearch-plugin-fe
+```
+
+As for the configurable parameters, I plan to put the param using separate `.yml` file as well as common environment variables:
+```console
+$ SAVEDSEARCH_ENABLED=true SAVEDSEARCH_ENGINE=savedsearch_config.yml
+```
+
 
 #### Integration with Backend
+As the BE developer, the integration process more or less will be look similar to this example (in Golang):
+```
+package main
 
-### 3. Communication with External e-mail System
-**E-mail Handler**
-<put multi provider handler image here>
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	saved-search "gopkg.in/dubizzle/savedsearch-plugin-be.v3"
+)
+func main() {
+    /* get default search source defined by the plugin */
+	searchSource := saved-search.GetSearchSource()
+    /* init saved search list and add json-based query string -search keyword and filter- to list */
+	searchSource.InitSavedList("name", "Doe")
+    searchSource.AddSavedList(json.Marshal(queryStr))
+
+    /* to get the search result from specific users and get it processed -email- based on Crontab script*/
+    searchService := saved-search.Search().User("name", "Doe").SearchSource(searchSource)
+    
+	searchResult, err := searchService.GetSearchResult()
+	if err != nil {
+		fmt.Println("Error getting result: ", err)
+		return
+	}
+
+    searchService.EmailProcessed(searchResult,"0 17 * * mon,wed")
+}
+```
+
+
+### 3. Communication with External email System
+In order to get better separation of concern and avoid Single Point of Failure (SPoF), more specialized handler is used to communicate to multiple external e-mail systems namely **E-mail Handler**.
+For example, the system will have GetResponse, Twilio and MailChimp as the external e-mail systems. Thus this handler will cover the direct interfacing layer to the system and translate the trigger (search-data and message properties ) received from the Core **Saved Search Handler** to each of the external system.
+This Handler will also incorporate scalability pattern to get the most reliable external system in terms of Round-Robin application and Fail-over in case one of the external system fail to do the job then other will take-over. 
 
 ### 4. Observation and Monitoring
 **Alert Handler** is the sub-system designated for communicating with **Main Alert System** for the purpose of observing and monitoring the Saved Search System overall lifecycle. 
